@@ -1,4 +1,5 @@
 <?php
+include_once("lib/config.php");
 if (!empty($_POST) && !empty($_POST['hud_data'])) {
 
     $json_text = stripslashes($_POST['hud_data']);
@@ -7,7 +8,7 @@ if (!empty($_POST) && !empty($_POST['hud_data'])) {
     $zip = new ZipArchive;
     $temp_name = uniqid(rand(), true);
 
-    $zip_name = "../../_temp/$temp_name.zip";
+    $zip_name = vhud_temp_dir() . "$temp_name.zip";
 
     $res = $zip->open($zip_name, ZipArchive::CREATE);
     $success = true;
@@ -31,7 +32,7 @@ if (!empty($_POST) && !empty($_POST['hud_data'])) {
             header("Content-Disposition: attachment; filename=$temp_name.zip");
             header("Content-Transfer-Encoding: binary");
             header("Content-Length: ".filesize($zip_name));
-            echo readfile("$zip_name");
+            readfile($zip_name);
         }
     } else {
         echo "Unable to create zip archive";

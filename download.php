@@ -170,7 +170,7 @@ if (!empty($_POST) && !empty($_POST['hud_data'])) {
     $zip = new ZipArchive; 
     $temp_name = uniqid(rand(), true);
   
-    $zip_name = "../../_temp/$temp_name.zip";
+    $zip_name = vhud_temp_dir() . "$temp_name.zip";
   
     $res = $zip->open($zip_name, ZipArchive::CREATE);
     if ($res === TRUE) {
@@ -194,7 +194,7 @@ if (!empty($_POST) && !empty($_POST['hud_data'])) {
         header("Content-Length: ".filesize($zip_name));
         ob_clean();
         flush();
-        echo readfile("$zip_name");
+        readfile($zip_name);
       } catch (Exception $e) {
         echo "Oops :(";
       }
