@@ -242,6 +242,32 @@ visualHUD.Libs.formBuilderMixin = {
             }
         },
 
+        getWidescreenOptions: function() {
+            return {
+                'auto': 'Auto',
+                '1': 'Left',
+                '2': 'Center',
+                '3': 'Right',
+                '0': 'Stretch'
+            }
+        },
+
+        getWidescreenControls: function() {
+            return {
+                type: 'fieldset',
+                label: 'Widescreen',
+                items: [
+                    this.getSelectBasic({
+                        label: 'Anchor',
+                        name: 'widescreen',
+                        value: this.model.get('widescreen'),
+                        options: this.getWidescreenOptions(),
+                        hint: 'Screen edge the item stays attached to on widescreen. Auto picks it from the item position.'
+                    })
+                ]
+            }
+        },
+
         getAvailabilityControls: function() {
             return {
                 type: 'fieldset',

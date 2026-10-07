@@ -16,6 +16,8 @@
 menuDef {
 	name "skillRating"
 	visible MENU_TRUE
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect <?= $menuItem->coordinates->left ?> <?= $top ?> <?= $menuItem->coordinates->width ?> <?= $menuItem->coordinates->height ?> 
 <? if($menuItem->ownerDraw) : ?>
 	ownerdrawflag <?= $menuItem->ownerDraw  ?>

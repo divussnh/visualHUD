@@ -20,6 +20,8 @@ menuDef {
 	name "flagIndicator"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect <?= $menuItem->coordinates->left; ?> <?= $menuItem->coordinates->top; ?> <?= $menuItem->coordinates->width; ?> <?= $menuItem->coordinates->height; ?> 
 	ownerdrawflag CG_SHOW_IF_PLYR_IS_ON_RED
 	
@@ -51,6 +53,8 @@ menuDef {
 	name "flagIndicator"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect <?= $menuItem->coordinates->left; ?> <?= $menuItem->coordinates->top; ?> <?= $menuItem->coordinates->width; ?> <?= $menuItem->coordinates->height; ?> 
 	ownerdrawflag CG_SHOW_IF_PLYR_IS_ON_BLUE
 	

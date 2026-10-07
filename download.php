@@ -12,6 +12,35 @@ function get_bar_ownerdraw($item) {
     };
 }
 
+// Quake Live "widescreen" value for a menuDef:
+// 0 = stretch (old behaviour), 1 = left, 2 = center, 3 = right.
+// "auto" (or a missing value in HUDs saved before this option existed)
+// picks the anchor from the item's position on the 640x480 grid.
+function get_widescreen($item) {
+    $value = isset($item->widescreen) ? (string)$item->widescreen : 'auto';
+
+    if (in_array($value, array('0', '1', '2', '3'), true)) {
+        return $value;
+    }
+
+    $left = $item->coordinates->left;
+    $right = $left + $item->coordinates->width;
+
+    if ($left <= 0 && $right >= 640) {
+        return '0';
+    }
+
+    $center = ($left + $right) / 2;
+
+    if ($center < 640 / 3) {
+        return '1';
+    }
+    if ($center > 640 * 2 / 3) {
+        return '3';
+    }
+    return '2';
+}
+
 function get_bar_left_offset($itm, $idx) {
 
     global $bar_steps;

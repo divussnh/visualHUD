@@ -33,3 +33,18 @@ CREATE TABLE downloads_count (`name` VARCHAR(32) PRIMARY KEY, `count` INT NOT NU
 ```
 
 The Feedback form posts to `contact.php`, which is not part of this repository.
+
+# Widescreen
+
+Every HUD element has a **Widescreen → Anchor** setting, written to each `menuDef`
+as Quake Live's `widescreen` keyword:
+
+| Anchor | Value | Behaviour |
+| --- | --- | --- |
+| Left | `widescreen 1` | stays attached to the left edge |
+| Center | `widescreen 2` | stays centered |
+| Right | `widescreen 3` | stays attached to the right edge |
+| Stretch | `widescreen 0` | old 4:3 behaviour, stretched across the screen |
+| Auto (default) | — | picked from the element's position: full-width elements stretch, otherwise left/center/right third of the 640×480 grid |
+
+HUDs saved before this setting existed use Auto. The editor canvas still shows the 4:3 layout.

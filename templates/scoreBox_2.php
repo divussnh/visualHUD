@@ -30,6 +30,8 @@ menuDef {
 	name "TopScoresBG"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE	
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect SCORES_1ST_POS 50 16
 	itemDef {
 		name "SelfTLeft"
@@ -100,6 +102,8 @@ menuDef {
 	name "BottomScoresBG"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE	
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect SCORES_2ND_POS 50 16
 	itemDef {
 		name "SelfTLeft"
@@ -170,6 +174,8 @@ menuDef {
 	name "redTeamScores"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE	
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect SCORES_1ST_POS 50 16
 	ownerdrawflag CG_SHOW_IF_RED_IS_FIRST_PLACE
 
@@ -257,6 +263,8 @@ menuDef {
 	name "redTeamScores"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE	
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect SCORES_2ND_POS 50 16
 	ownerdrawflag CG_SHOW_IF_BLUE_IS_FIRST_PLACE
 
@@ -344,6 +352,8 @@ menuDef {
 	name "blueTeamScores"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE	
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect SCORES_1ST_POS 50 16
 	ownerdrawflag CG_SHOW_IF_BLUE_IS_FIRST_PLACE
 
@@ -431,6 +441,8 @@ menuDef {
 	name "blueTeamScores"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE	
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect SCORES_2ND_POS 50 16
 	ownerdrawflag CG_SHOW_IF_RED_IS_FIRST_PLACE
 
@@ -520,6 +532,8 @@ menuDef {
 	name "1STPlace"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE	
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect SCORES_1ST_POS 50 16
 	ownerdrawflag CG_SHOW_ANYNONTEAMGAME
 
@@ -538,6 +552,8 @@ menuDef {
 	name "Trailing"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE	
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect SCORES_2ND_POS 50 16
 	ownerdrawflag CG_SHOW_ANYNONTEAMGAME
 

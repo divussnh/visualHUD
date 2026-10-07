@@ -75,7 +75,12 @@ visualHUD.Views.HUDItemForm = Backbone.View.extend({
 
         visualHUD.Libs.colorHelper.setupColorPicker(renderTo);
 
-        this.createControls(this.$el.find('.app-form-controls'));
+        var controlsContainer = this.$el.find('.app-form-controls');
+
+        this.createControls(controlsContainer);
+
+        // Every item type gets the widescreen anchor, placed above its own controls
+        controlsContainer.get(0).insertBefore(this.buildForm([this.getWidescreenControls()]), controlsContainer.get(0).firstChild);
     },
 
     trackResize: function() {

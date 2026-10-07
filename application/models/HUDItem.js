@@ -36,7 +36,8 @@ visualHUD.Models.HUDItem = Backbone.Model.extend({
         'barDirection': null,
         'resizable': false,
         'group': null,
-        'ownerDrawFlag': '0'
+        'ownerDrawFlag': '0',
+        'widescreen': 'auto'
     },
 
     /**

@@ -9,6 +9,8 @@ menuDef {
 	name "ScoreFrame"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE	
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect <?= $menuItem->coordinates->left ?> <?= $baseTop ?> 32 256
 	
 //Score Frame BG, can be scaled wider if needed to make more room for names	
@@ -46,6 +48,8 @@ menuDef {
 	name "RedFrameTeam"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE	
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect  <?= $menuItem->coordinates->left ?> <?= $baseTop ?> 32 256
 	ownerdrawflag CG_SHOW_IF_RED_IS_FIRST_PLACE// AND CG_SHOW_ANYNONTEAMGAME
 	
@@ -119,6 +123,8 @@ menuDef {
 	name "RedFrameTeam"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE	
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect  <?= $menuItem->coordinates->left ?> <?= $tailTop ?> 32 256
 	ownerdrawflag CG_SHOW_IF_BLUE_IS_FIRST_PLACE
 
@@ -199,6 +205,8 @@ menuDef {
 	name "BlueFrameTeam"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE	
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect  <?= $menuItem->coordinates->left ?> <?= $baseTop ?> 32 256
 	ownerdrawflag CG_SHOW_IF_BLUE_IS_FIRST_PLACE
 
@@ -278,6 +286,8 @@ menuDef {
 	name "BlueFrameTeam"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE	
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect  <?= $menuItem->coordinates->left ?> <?= $tailTop ?> 32 256
 	ownerdrawflag CG_SHOW_IF_RED_IS_FIRST_PLACE// AND CG_SHOW_ANYNONTEAMGAME
 
@@ -358,6 +368,8 @@ menuDef {
 	name "SelfFrameHighlights"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE	
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect  <?= $menuItem->coordinates->left ?> <?= $baseTop ?> 32 256
 
 	//self top highlight
@@ -429,6 +441,8 @@ menuDef {
 	name "scores"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE	
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect  <?= $menuItem->coordinates->left ?> <?= $baseTop ?> 120 40
     itemdef {
 	    name "1stplace"

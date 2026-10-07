@@ -12,6 +12,8 @@ menuDef {
 	name "healthIndicator"
 	fullScreen MENU_FALSE
 	visible MENU_TRUE
+	widescreen <?= get_widescreen($menuItem) ?>
+
 	rect <?= $menuItem->coordinates->left; ?> <?= $menuItem->coordinates->top; ?> <?= $menuItem->coordinates->width; ?> <?= $menuItem->coordinates->height; ?>
 
     ownerdrawflag <?= $menuItem->ownerDrawFlag ?>
